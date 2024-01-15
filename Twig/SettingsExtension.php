@@ -20,7 +20,7 @@ class SettingsExtension extends AbstractExtension
         $this->settingsManager = $settingsManager;
     }
 
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
             new TwigFunction('get_setting', [$this->settingsManager, 'get']),
